@@ -1,0 +1,130 @@
+
+<div class="pagina">
+
+  <header class="cabecalho">
+    <div class="logo">
+      <span class="logo-icone">m</span>
+      <span>MIMO</span>
+    </div>
+
+    <p>Seu dinheiro, seu ritmo, suas escolhas.</p>
+  </header>
+
+  <main class="conteudo">
+
+    <section class="boas-vindas">
+      <div>
+        <span class="subtitulo">SEU ESPAÇO FINANCEIRO</span>
+        <h1>Olá! Vamos cuidar do seu dinheiro?</h1>
+        <p>Acompanhe suas movimentações e mantenha suas finanças em equilíbrio.</p>
+      </div>
+
+      <div class="data-atual">
+        <span>HOJE</span>
+        <strong>{{ hoje }}</strong>
+      </div>
+    </section>
+
+    <section class="resumo">
+
+      <div class="card saldo">
+        <span>Saldo disponível</span>
+        <h2>R$ 0,00</h2>
+        <small>Seu resultado financeiro</small>
+      </div>
+
+      <div class="card">
+        <span>Receitas</span>
+        <h2 class="valor-receita">R$ 0,00</h2>
+        <small>Total que entrou</small>
+      </div>
+
+      <div class="card">
+        <span>Despesas</span>
+        <h2 class="valor-despesa">R$ 0,00</h2>
+        <small>Total que saiu</small>
+      </div>
+
+    </section>
+
+    <section class="area-principal">
+
+      <div class="painel">
+        <div class="titulo-painel">
+          <div>
+            <span class="subtitulo">ORGANIZAÇÃO</span>
+            <h2>Nova movimentação</h2>
+          </div>
+        </div>
+
+        
+<form class="formulario" (ngSubmit)="cadastrarMovimentacao()">
+
+  <label>Tipo de movimentação</label>
+  <select name="tipo" [(ngModel)]="tipo" required>
+    <option value="receita">Receita</option>
+    <option value="despesa">Despesa</option>
+  </select>
+
+  <label>Descrição</label>
+  <input
+    type="text"
+    name="descricao"
+    [(ngModel)]="descricao"
+    placeholder="Ex: Salário, mercado, aluguel"
+    required
+  >
+
+  <label>Categoria</label>
+  <select name="categoria" [(ngModel)]="categoria" required>
+    <option value="">Selecione uma categoria</option>
+    <option value="Trabalho">Trabalho</option>
+    <option value="Alimentação">Alimentação</option>
+    <option value="Moradia">Moradia</option>
+    <option value="Transporte">Transporte</option>
+    <option value="Saúde">Saúde</option>
+    <option value="Lazer">Lazer</option>
+    <option value="Educação">Educação</option>
+    <option value="Outros">Outros</option>
+  </select>
+
+  <label>Valor (R$)</label>
+  <input
+    type="number"
+    name="valor"
+    [(ngModel)]="valor"
+    placeholder="0,00"
+    min="0.01"
+    step="0.01"
+    required
+  >
+
+  <label>Data</label>
+  <input
+    type="date"
+    name="data"
+    [(ngModel)]="data"
+    required
+  >
+
+  <button type="submit">Cadastrar movimentação</button>
+
+</form>
+
+      </div>
+
+      <div class="painel">
+        <span class="subtitulo">ACOMPANHAMENTO</span>
+        <h2>Suas movimentações</h2>
+        <p>Suas movimentações financeiras aparecerão aqui.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>MIMO © 2026 — Seu dinheiro, seu ritmo.</p>
+  </footer>
+
+</div>

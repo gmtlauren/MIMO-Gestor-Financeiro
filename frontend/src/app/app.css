@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #FFF9EC;
+  color: #22211E;
+}
+
+.pagina {
+  min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+  background: #22211E;
+  color: white;
+  padding: 22px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo-icone {
+  background: #F5C842;
+  color: #22211E;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.cabecalho p {
+  color: #E9E5DA;
+  font-size: 13px;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.boas-vindas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.subtitulo {
+  color: #A17A0A;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1, h2 {
+  font-family: 'Syne', sans-serif;
+}
+
+.boas-vindas h1 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.boas-vindas p {
+  color: #77736A;
+  font-size: 14px;
+}
+
+.data-atual {
+  background: #FFEBA3;
+  padding: 15px 22px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data-atual span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #80600A;
+}
+
+.data-atual strong {
+  font-size: 16px;
+}
+
+/* CARDS */
+
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #E9E5DA;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card span {
+  font-size: 13px;
+  color: #77736A;
+}
+
+.card h2 {
+  font-size: 27px;
+}
+
+.card small {
+  color: #99948A;
+  font-size: 12px;
+}
+
+.saldo {
+  background: #F5C842;
+  border: none;
+}
+
+.saldo span,
+.saldo small {
+  color: #51400C;
+}
+
+.valor-receita {
+  color: #258451;
+}
+
+.valor-despesa {
+  color: #C34D43;
+}
+
+/* PAINÉIS */
+
+.area-principal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.painel {
+  background: white;
+  border: 1px solid #E9E5DA;
+  border-radius: 18px;
+  padding: 28px;
+  min-height: 180px;
+}
+
+.painel h2 {
+  font-size: 21px;
+  margin: 10px 0 18px;
+}
+
+.painel p {
+  color: #77736A;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #99948A;
+  font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .boas-vindas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .area-principal {
+    grid-template-columns: 1fr;
+  }
+
+  .boas-vindas h1 {
+    font-size: 24px;
+  }
+}
+
+
+/* FORMULÁRIO DE MOVIMENTAÇÕES */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.formulario label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #514D43;
+}
+
+.formulario input,
+.formulario select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #E9E5DA;
+  border-radius: 10px;
+  background: #FFFDF8;
+  color: #22211E;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  border-color: #F5C842;
+}
+
+.formulario button {
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #22211E;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulario button:hover {
+  background: #514D43;
+}

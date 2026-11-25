@@ -1,0 +1,13 @@
+# Dependências
+node_modules/
+
+# Configurações privadas
+.env
+.env.*
+
+# Angular
+.angular/
+dist/
+
+# Logs
+*.log
